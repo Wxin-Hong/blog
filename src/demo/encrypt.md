@@ -1,5 +1,5 @@
 ---
-icon: lock
+icon: hugeicons:book-open-01
 category:
   - 使用指南
 tag:

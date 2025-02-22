@@ -1,6 +1,6 @@
 ---
 title: Markdown 展示
-icon: fa6-brands:markdown
+icon: hugeicons:book-open-01
 order: 2
 category:
   - 使用指南

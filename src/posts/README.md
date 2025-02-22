@@ -1,9 +1,9 @@
 ---
-title: Projects
+title: Posts
 index: false
 icon: hugeicons:binary-code
 category:
-  - product
+  - posts
 ---
 
 <Catalog />
