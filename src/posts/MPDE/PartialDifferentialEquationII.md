@@ -1,9 +1,10 @@
 ---
-title: Partial Differential Equation I
+title: Partial Differential Equation II
 icon: hugeicons:book-open-01
-order: 3
+order: 4
 category:
   - analysis
 tag:
   - PDE
 ---
+
