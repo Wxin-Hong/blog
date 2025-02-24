@@ -1,7 +1,7 @@
 ---
 title: Posts
 index: false
-icon: hugeicons:binary-code
+icon: book
 category:
   - posts
 ---
