@@ -34,7 +34,7 @@ $$\begin{align*} \forall u \in H^1(\Omega), \Vert u \Vert _{H^1(\Omega)} &=\Big(
 
 現在有一個重要的性質：
 
-#### $H^1(\Omega)$ is Hilbert Space.
+### $H^1(\Omega)$ is Hilbert Space.
 
 要證明 $H^1(\Omega)$ 是個 Hilbert Space 其實就是要驗證在 $\Vert \cdot\Vert _{H^1(\Omega)}$ 這個 norm 底下， $(H^1(\Omega),\Vert \cdot\Vert _{H^1(\Omega)})$ 是不是 complete. 因此現在我們任意給定一個 Cauchy sequence $u_n \in H^1(\Omega)$, 我們要證明 $u_n$ 收斂於 $H^1(\Omega)$ 裡，以 $\Vert \cdot\Vert _{H^1(\Omega)}$ 這個 norm 作為測距下。 
 
@@ -68,7 +68,7 @@ $$-\displaystyle\int_{\Omega} u(x)\frac{\partial \varphi}{\partial x_j}(x)dx=\in
 
 ### 什麼是分數次微分？
 
-當然這邊只給出一個簡單的想法，我們考慮之前 Fourier transform 在 $S(\mathbb{R}^N)$ 上的如下性質：
+當然這邊只給出一個簡單的想法，我們考慮之前 Fourier transform 在 $\mathcal S(\mathbb{R}^N)$ 上的如下性質：
 
 ##### Let $\varphi\in S(\mathbb{R}^N)$, we have $\displaystyle\widehat{\frac{\partial \varphi}{\partial x_j}}(\xi)=i\xi_j \widehat{\varphi}(\xi)$
 
@@ -96,14 +96,18 @@ $$\Vert \varphi_n-\varphi\Vert_{H^s(\mathbb R ^N)}=\Vert \langle \xi \rangle ^{s
 
 因此我們證明了 $\varphi_n\to\varphi$ 當 $n\to\infty$,也就是說 $H^s(\mathbb{R}^N)$ 會是 complete.
 
-現在我們定義出了分數次微分的 Sobolev Space, 但是我們以 Fourier transfrom 所定義出的這種空間是否在 $s$ 是正整數時會恰好吻合？ 也就是說當 $s=m\in\mathbb N^*$ 時，由一般的微分所定出的 Sobolev Space $H^m(\mathbb R^N)$ 是否與由 Fourier transform 所定出的 Sobolev Space 是相同的。以下有定理告訴我們，這件事確實是成立的。
+現在我們定義出了分數次微分的 Sobolev Space, 但是我們以 Fourier transfrom 所定義出的這種空間是否在 $s$ 是正整數時會恰好吻合由 partial derivatives 所定出的 Sobolev Space？ 也就是說當 $s=m\in\mathbb N^*$ 時，由一般的微分所定出的 Sobolev Space $H^m(\mathbb R^N)$ 是否與由 Fourier transform 所定出的 Sobolev Space 是相同的。以下有定理告訴我們，這件事確實是成立的。
 
 #### Let $m\in\mathbb N^*$, the space $H^m(\mathbb R^N)$ defined by partial derivatives coincide with that defined by Fourier transform. Moreover, such two norms defined in different way are equivalent. 
 
-#### Let $m\in\mathbb N$, there exists constants $C_1(m,N)$, $C_2(m,N)>0$ s.t. for all $\xi\in\mathbb R^N$, $$C_1(m,N)\langle\xi\rangle^{2m}\le\displaystyle\sum_{\vert\alpha\vert\le m}\Big(\prod_{j=1}^N\vert\xi_j\vert^{2\alpha_j}\Big)\le C_2(m,N)\langle\xi\rangle^{2m}$$
+要證明此定理，我們會用到以下引理，但我們會在完成定理證明後才為此引理作證。
+
+#### Let $m\in\mathbb N$, there exists constants $C_1(m,N)$, $C_2(m,N)>0$ s.t. for all $\xi\in\mathbb R^N$, $C_1(m,N)\langle\xi\rangle^{2m}\le\displaystyle\sum_{\vert\alpha\vert\le m}\Big(\prod_{j=1}^N\vert\xi_j\vert^{2\alpha_j}\Big)\le C_2(m,N)\langle\xi\rangle^{2m}$
 
 現在我們把證明分為兩部分，第一部分是證明 $H^m(\mathbb R^N)=H^s(\mathbb R^N)$ 當 $s=m\in \mathbb N^*$. 第二部分則是證明這兩種 norms 是等價的。
 
+##### 第一部分 $H^m(\mathbb R^N)=H^s(\mathbb R^N)$
+
 - $H^m(\mathbb R^N)\subseteq H^s(\mathbb R^N)$
 
-令 $u\in H^m(\mathbb R^N)$, id est $u\in L^2(\mathbb R^N)$ 並且滿足 $\forall \alpha\in\mathbb N^N$ 在 $\vert \alpha \vert\le m$ 的情況下，我們都有 $\partial^\alpha u\in L^2(\mathbb R^N)$ in distribution sense. 根據 embedding 的性質 $L^2(\mathbb R^N)\underset{\text{continuous}}{\hookrightarrow}\mathcal S'(\mathbb R^N)$.
+令 $u\in H^m(\mathbb R^N)$, id est $u\in L^2(\mathbb R^N)$ 並且滿足 $\forall \alpha\in\mathbb N^N$ 在 $\vert \alpha \vert\le m$ 的情況下，我們都有 $\partial^\alpha u\in L^2(\mathbb R^N)$ in distribution sense. 根據 embedding 的性質 $L^2(\mathbb R^N)\underset{\text{continuous}}{\hookrightarrow}\mathcal S'(\mathbb R^N)$. 我們得知 $u\in \mathcal S'(\mathbb R^N)$
